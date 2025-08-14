@@ -421,7 +421,7 @@
         <!--Face View Controller-->
         <scene sceneID="hHb-4V-smw">
             <objects>
-                <viewController storyboardIdentifier="HVFaceViewController" id="qVG-fv-wg9" customClass="HVFaceViewController" customModule="HVResources" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HVFaceViewController" id="qVG-fv-wg9" customClass="HVFaceViewController" customModule="HyperSnapSDK" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8rb-rp-E6z"/>
                         <viewControllerLayoutGuide type="bottom" id="wCd-r2-8Pb"/>
@@ -1611,7 +1611,7 @@
         <!--Doc Instructions View Controller-->
         <scene sceneID="Sbx-D1-u0n">
             <objects>
-                <viewController storyboardIdentifier="HVDocInstructionsViewController" id="FLA-dQ-4zP" customClass="HVDocInstructionsViewController" customModule="HVResources" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HVDocInstructionsViewController" id="FLA-dQ-4zP" customClass="HVDocInstructionsViewController" customModule="HyperSnapSDK" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pxz-GG-MQj"/>
                         <viewControllerLayoutGuide type="bottom" id="PB5-3Y-ku4"/>
