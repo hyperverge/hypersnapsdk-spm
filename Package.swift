@@ -1,36 +1,34 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
+  name: "HyperSnapSDK",
+  platforms: [.iOS(.v13)],
+  products: [
+    .library(name: "HyperSnapSDK", type: .static, targets: ["HyperSnapSDKWrapper"])
+  ],
+  targets: [
+    // Binary target
+    .binaryTarget(
     name: "HyperSnapSDK",
-    platforms: [
-        .iOS(.v12)
-    ],
-    products: [
-        // Final product that consumers import as "HyperSnapSDK"
-        .library(
-            name: "HyperSnapSDK",
-            targets: ["HyperSnapSDKWrapper"]
-        )
-    ],
-    targets: [
-        // Binary target: name MUST match the actual module name in the XCFramework.
-        .binaryTarget(
-            name: "HyperSnapSDK", // Use "HyperSnapSDK" here, not "HyperSnapSDKBinary"
-            path: "Core/HyperSnapSDK.xcframework"
-        ),
+    url: "https://hvsdk.s3.ap-south-1.amazonaws.com/ios/release/hypersnapsdk/6.0.0/HyperSnapSDK-6.0.0-XCFramework.zip",
+    checksum: "0438c9d635482ead05680c25d07289b8c1360e0e73e26ffe461df4c695ed7418"
+),
 
-        // Swift wrapper target that depends on the binary target and processes resources.
-        .target(
-            name: "HyperSnapSDKWrapper",
-            dependencies: [
-                .target(name: "HyperSnapSDK")
-            ],
-            path: "Sources/HyperSnapSDKWrapper",
-            resources: [
-                // Adjust the relative path as needed.
-                .process("HVResources")
-            ]
-        )
-    ]
+    // Resource-only SPM target (contains Sources/HyperSnapSDKResources/Resources)
+    .target(
+      name: "HyperSnapSDKResources",
+      path: "Sources/HyperSnapSDKResources",
+      resources: [
+        .process("Resources")
+      ]
+    ),
+
+    // Thin wrapper target that re-exports the binary and depends on resources
+    .target(
+      name: "HyperSnapSDKWrapper",
+      dependencies: ["HyperSnapSDK", "HyperSnapSDKResources"],
+      path: "Sources/HyperSnapSDKWrapper"
+    )
+  ]
 )

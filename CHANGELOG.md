@@ -1,3 +1,7 @@
+#### 6.0.0 [10 Dec 2025]
+- Enhancements:
+    - Added support for SPM
+    - Enhanced document detection and removed dependency on another submodule
 #### 5.0.0 [12 Aug 2025]
 - Enhancements
     - Improvements to face detection algorithm for face capture
