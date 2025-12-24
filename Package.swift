@@ -12,7 +12,7 @@ let package = Package(
     .binaryTarget(
     name: "HyperSnapSDK",
     url: "https://hvsdk.s3.ap-south-1.amazonaws.com/ios/release/hypersnapsdk/6.0.0/HyperSnapSDK-6.0.0-XCFramework.zip",
-    checksum: "6bcfcd103100a46a5e1de314d70c6d3eaeb64de9ce89883ff88caf3866d9df13"
+    checksum: "8c3cf9f9cd31e577c49d97dd5f8789dc1be7249d3b3b68f89473acf7321da55f"
 ),
 
     // Resource-only SPM target (contains Sources/HyperSnapSDKResources/Resources)
