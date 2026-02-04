@@ -1,3 +1,12 @@
+#### 6.0.1 [3 Feb 2026]
+ - Enhancements
+    - Added logic to make the retake message card background colour customisable by using the key `retakeMessageCardBackgroundColor`
+    - Added changes to make retake message card corners round to have same consistent design across all sdks
+    
+#### 6.0.0 [10 Dec 2025]
+- Enhancements:
+    - Added support for SPM
+    - Enhanced document detection and removed dependency on another submodule
 #### 5.0.0 [12 Aug 2025]
 - Enhancements
     - Improvements to face detection algorithm for face capture

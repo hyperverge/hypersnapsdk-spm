@@ -1,36 +1,34 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
+  name: "HyperSnapSDK",
+  platforms: [.iOS(.v13)],
+  products: [
+    .library(name: "HyperSnapSDK", type: .static, targets: ["HyperSnapSDKWrapper"])
+  ],
+  targets: [
+    // Binary target
+    .binaryTarget(
     name: "HyperSnapSDK",
-    platforms: [
-        .iOS(.v12)
-    ],
-    products: [
-        // Final product that consumers import as "HyperSnapSDK"
-        .library(
-            name: "HyperSnapSDK",
-            targets: ["HyperSnapSDKWrapper"]
-        )
-    ],
-    targets: [
-        // Binary target: name MUST match the actual module name in the XCFramework.
-        .binaryTarget(
-            name: "HyperSnapSDK", // Use "HyperSnapSDK" here, not "HyperSnapSDKBinary"
-            path: "Core/HyperSnapSDK.xcframework"
-        ),
+    url: "https://hvsdk.s3.amazonaws.com/ios/release/hypersnapsdk/6.0.1/HyperSnapSDK.xcframework.zip"
+      checksum: "b6cfa6e40f896cabb87f6e46bdbe4206b2b267cdddbdbe04d6855c7ae05e4f13"
+),
 
-        // Swift wrapper target that depends on the binary target and processes resources.
-        .target(
-            name: "HyperSnapSDKWrapper",
-            dependencies: [
-                .target(name: "HyperSnapSDK")
-            ],
-            path: "Sources/HyperSnapSDKWrapper",
-            resources: [
-                // Adjust the relative path as needed.
-                .process("HVResources")
-            ]
-        )
-    ]
+    // Resource-only SPM target (contains Sources/HyperSnapSDKResources/Resources)
+    .target(
+      name: "HyperSnapSDKResources",
+      path: "Sources/HyperSnapSDKResources",
+      resources: [
+        .process("Resources")
+      ]
+    ),
+
+    // Thin wrapper target that re-exports the binary and depends on resources
+    .target(
+      name: "HyperSnapSDKWrapper",
+      dependencies: ["HyperSnapSDK", "HyperSnapSDKResources"],
+      path: "Sources/HyperSnapSDKWrapper"
+    )
+  ]
 )
