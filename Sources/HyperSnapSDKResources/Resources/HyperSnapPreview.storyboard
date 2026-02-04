@@ -1180,7 +1180,7 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Blur detected" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CqN-wx-Q0b" customClass="HVRetakeMessageLabel" customModule="HyperSnapSDK">
                                                         <rect key="frame" x="36.000000000000007" y="0.0" width="84.666666666666686" height="56"/>
-                                                        <color key="backgroundColor" red="0.97647064920000004" green="0.97647064920000004" blue="0.97647064920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Mulish-Regular" family="Mulish" pointSize="14"/>
                                                         <color key="textColor" red="0.019607843140000001" green="0.019607843140000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1188,13 +1188,13 @@
                                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="CqN-wx-Q0b" firstAttribute="height" secondItem="unc-1p-itQ" secondAttribute="height" id="KnO-O8-dG2"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="unc-1p-itQ" firstAttribute="height" secondItem="d9L-7o-6La" secondAttribute="height" id="4A1-el-W5u"/>
                                             <constraint firstAttribute="height" constant="56" id="dWz-Y2-n4g" customClass="AdaptiveLayoutConstraint" customModule="HyperSnapSDK"/>
@@ -1391,6 +1391,7 @@
                         <outlet property="previousImageButton" destination="49y-Pq-B9h" id="iMM-sH-Pv3"/>
                         <outlet property="retakeButton" destination="4SC-H0-m6m" id="C2v-hz-r0n"/>
                         <outlet property="retakeButtonHeightConstraint" destination="mOD-Wb-Iua" id="p4m-ku-qzc"/>
+                        <outlet property="retakeMessageStackView" destination="d9L-7o-6La" id="RXa-xu-wih"/>
                         <outlet property="rightPaddingView" destination="tdb-wr-FkX" id="b74-2j-jNe"/>
                         <outlet property="titleText" destination="mwI-1m-s3b" id="kUB-Vj-Dge"/>
                         <outlet property="topSpaceConstraint" destination="gG5-JS-QSQ" id="o3y-Hs-969"/>
@@ -1488,7 +1489,7 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Please Capture Again" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-ss-4Fh" customClass="HVRetakeMessageLabel" customModule="HyperSnapSDK">
                                                         <rect key="frame" x="36.000000000000014" y="0.0" width="140.66666666666669" height="56"/>
-                                                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="C8o-kC-il6" customClass="AdaptiveLayoutConstraint" customModule="HyperSnapSDK"/>
                                                         </constraints>
@@ -1497,10 +1498,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="AsD-tx-8lR"/>
                                         </constraints>
@@ -1600,6 +1601,7 @@
                         <outlet property="imageView" destination="BRo-26-dZr" id="HTM-Tb-5XU"/>
                         <outlet property="leftPaddingView" destination="Xrp-FF-jSz" id="pEx-Kr-7V5"/>
                         <outlet property="retakeButton" destination="VlP-6T-nOd" id="gvL-AJ-HWC"/>
+                        <outlet property="retakeMessageStackView" destination="UzN-Bx-X4L" id="zDK-Ql-OI7"/>
                         <outlet property="rightPaddingView" destination="BeI-xR-hhA" id="nf3-jz-IIN"/>
                         <outlet property="topView" destination="gzc-vP-TnR" id="Kzs-qb-x9i"/>
                     </connections>
