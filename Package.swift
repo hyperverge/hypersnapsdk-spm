@@ -8,23 +8,19 @@ let package = Package(
     .library(name: "HyperSnapSDK", type: .static, targets: ["HyperSnapSDKWrapper"])
   ],
   targets: [
-    // Binary target
     .binaryTarget(
-          name: "HyperSnapSDK",
-          url: "https://hvsdk.s3.amazonaws.com/ios/release/hypersnapsdk/6.1.0/HyperSnapSDK.xcframework.zip",
-          checksum: "96a39094b572dc36c64efd740d8135dc3ef61dc383a5a8cca418c288e4785824"
-
-        ),
-    // Resource-only SPM target (contains Sources/HyperSnapSDKResources/Resources)
+      name: "HyperSnapSDK",
+      url: "https://hvsdk.s3.amazonaws.com/ios/release/hypersnapsdk/6.2.0/HyperSnapSDK.xcframework.zip",
+      checksum: "99725c4d316a00076939583965778c26f7c3cb0a333b31d46a9ba4916e4e7ef5"
+    ),
     .target(
       name: "HyperSnapSDKResources",
       path: "Sources/HyperSnapSDKResources",
       resources: [
+        .copy("HyperSnapPreview.storyboardc"),
         .process("Resources")
       ]
     ),
-
-    // Thin wrapper target that re-exports the binary and depends on resources
     .target(
       name: "HyperSnapSDKWrapper",
       dependencies: ["HyperSnapSDK", "HyperSnapSDKResources"],
