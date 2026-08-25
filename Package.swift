@@ -11,7 +11,7 @@ let package = Package(
     .binaryTarget(
       name: "HyperSnapSDK",
       url: "https://hvsdk.s3.amazonaws.com/ios/release/hypersnapsdk/6.6.1/HyperSnapSDK.xcframework.zip",
-      checksum: "4ece1d8257cf726987f84a524b3f3636c256060dbef7b2ddcfd6c5053afa4c9a"
+      checksum: "7588a7ae7dd89e84c4029de6ea7a3c0ed62db5144f51c5d5a78230c73ef26501"
     ),
     .target(
       name: "HyperSnapSDKResources",
